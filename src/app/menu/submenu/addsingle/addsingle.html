@@ -1,0 +1,55 @@
+<div class="morespace" >
+        <div class="marginone">
+        <br>
+        <p> Item Name</p>
+        </div>
+        <div class="example-container">
+        <mat-form-field appearance="outline">
+        <input matInput placeholder="Input" [(ngModel)]="itemName" >
+        </mat-form-field>
+    
+        <p> Item ID</p>
+        <mat-form-field appearance="outline">
+        <textarea matInput placeholder="Textarea"  [(ngModel)]="itemId"></textarea>
+        </mat-form-field>
+        
+    
+        <p> Item Description</p>
+        <mat-form-field appearance="outline">
+        <textarea matInput placeholder="Textarea"  [(ngModel)]="itemDescription"></textarea>
+        </mat-form-field>
+        <p>Item Type </p>
+        <mat-form-field appearance="outline">
+        <input matInput placeholder="Input"  [(ngModel)]="itemType" >
+        </mat-form-field>
+
+        <p>Item Section </p>
+        <mat-form-field appearance="outline">
+
+                          <mat-label>Select Section</mat-label>
+                          <mat-select (selectionChange)="changeClient($event.value)">
+                            <mat-option *ngFor="let food of sections" [value]="food">
+                              {{food}}
+                            </mat-option>
+                          </mat-select>
+ 
+        </mat-form-field>
+
+        <p> Price</p>
+        <mat-form-field appearance="outline">
+        <input type="number" matInput placeholder="Input"  [(ngModel)]="itemPrice">
+        </mat-form-field>
+        </div>
+        <div class="marginone">
+        <p> Upload Image</p>
+        </div>
+        <div class="marginone">
+        <input mat-raised-button type='file' (change)="onSelectFile($event)">
+        </div>
+                        
+        <br>
+        <div class="example-container">
+        <button mat-raised-button color="primary" (click)="addMenuCard()">Add</button>
+        </div>
+        </div>
+        
