@@ -4,5 +4,5 @@ export class item{
     itemPrice:number;
     itemType:string;
     itemId:number;
-    itemSection:String;
+    itemSection:string;
 }
