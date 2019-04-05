@@ -18,7 +18,7 @@ export class LoginService{
         var headers =new HttpHeaders();
         localStorage.setItem('currentUser', JSON.stringify(0));
         console.log(localStorage.getItem('currentUser'))
-        return this.http.post('https://git.heroku.com/shrouded-refuge-34273.git',login_data).pipe(map(user => {
+        return this.http.post('https://git.heroku.com/shrouded-refuge-34273.git/login/getlogin',login_data).pipe(map(user => {
             // login successful if there's a jwt token in the response
             //console.log("sffsfsd",user);
             if (user) {
