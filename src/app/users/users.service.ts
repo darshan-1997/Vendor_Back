@@ -15,13 +15,13 @@ export class UserService {
 
   getContacts()
   {
-    return this.http.get('https://git.heroku.com/shrouded-refuge-34273.git').pipe(map(res=> res));
+    return this.http.get('https://git.heroku.com/shrouded-refuge-34273.git/api/users').pipe(map(res=> res));
   }
   
   addContacts(newUser)
   {
     var headers =new HttpHeaders();
     headers.append('Content-Type','application/json');
-    return this.http.post('https://git.heroku.com/shrouded-refuge-34273.git',newUser,{headers:headers}).pipe(map(res=> res));
+    return this.http.post('https://git.heroku.com/shrouded-refuge-34273.git/api/contact',newUser,{headers:headers}).pipe(map(res=> res));
   }
 }
