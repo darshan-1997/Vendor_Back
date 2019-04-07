@@ -1,0 +1,46 @@
+<h2 mat-dialog-title>{{description}}</h2>
+<mat-dialog-content >
+   <mat-form-field>
+      <input matInput
+         placeholder="itemName"
+         [(ngModel)]="updateData.itemName"
+         >
+   </mat-form-field>
+   <mat-form-field>
+      <input matInput
+         placeholder="itemType"
+         [(ngModel)]="updateData.itemType"
+         >
+   </mat-form-field>
+   <mat-form-field>
+      <input matInput
+         placeholder="itemDescription"
+         [(ngModel)]="updateData.itemDescription"
+         >
+   </mat-form-field>
+   <mat-form-field>
+      <input matInput
+         placeholder="itemPrice"
+         [(ngModel)]="updateData.itemPrice"
+         >
+   </mat-form-field>
+
+   <!-- <mat-form-field appearance="outline">
+
+                     <mat-label>Select Section</mat-label>
+                     <mat-select [(ngModel)]="selectedOption" (selectionChange)="changeClient($event.value)">
+                       <mat-option *ngFor="let food of sections" [value]="updateData.itemSection">
+                         {{food}}
+                       </mat-option>
+                     </mat-select>
+
+   </mat-form-field> -->
+
+
+      <input mat-raised-button type='file' (change)="onSelectFile($event)">
+
+</mat-dialog-content>
+<mat-dialog-actions>
+   <button class="mat-raised-button"(click)="close()">Close</button>
+   <button class="mat-raised-button mat-primary"(click)="save()">Save</button>
+</mat-dialog-actions>
